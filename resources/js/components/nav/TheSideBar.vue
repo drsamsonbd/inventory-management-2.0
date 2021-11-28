@@ -39,11 +39,11 @@
           </li>
         </ul>
       </li> 
-      <!--Pesakit Dalam-->
+      <!--KEWANGAN-->
         <li  class="nav-item has-treeview"  v-if="roles.includes('superadmin')    || roles.includes('hospital') "  >
         <a class="nav-link" >
           <i class="nav-icon fas fa-h-square purple "></i>
-          <p>WAD
+          <p>KEWANGAN
            <i class="right fas fa-angle-left"></i>
            </p>
         </a>
@@ -51,68 +51,30 @@
            <ul class="nav nav-treeview">
 
           <li class="nav-item">
-            <router-link to="/inpatientactive" class="nav-link">
+            <router-link to="/allocation" class="nav-link">
              
               <p id="submenu">
-                Bed Manager
+                Peruntukan
               </p>
             </router-link>
           </li>
-      <!--    <li class="nav-item">
-            <router-link to="/inpatientadmission" class="nav-link">
-           
-              <p id="submenu">
-                Senarai 
-              </p>
-            </router-link>
-          </li>
-           <li class="nav-item">
-            <router-link to="/inpatientdischarge" class="nav-link">
-           
-              <p id="submenu">
-                Discaj
-              </p>
-            </router-link>
-          </li>-->
+
                <li class="nav-item">
-            <router-link to="/InpatientnewPatient" class="nav-link">
+            <router-link to="/code" class="nav-link">
            
               <p id="submenu">
-                Pesakit Baru
+                Kod Peruntukan
               </p>
             </router-link>
           </li>
-              <li class="nav-item">
-            <router-link to="/inpatientsearch" class="nav-link">
-           
-              <p id="submenu">
-                Carian
-              </p>
-            </router-link>
-          </li>
-            <li class="nav-item">
-            <router-link to="/inpatientCensus" class="nav-link">
-           
-              <p id="submenu">
-                Census Harian
-              </p>
-            </router-link>
-          </li>
-                    <li class="nav-item">
-            <router-link to="/inpatientdischargelist" class="nav-link">
-           
-              <p id="submenu">
-                Senarai Discaj
-              </p>
-            </router-link>
-          </li>
+     
         </ul>
       </li> 
-  <!--    PKRC --->
-        <li  class="nav-item has-treeview" v-if="roles.includes('superadmin')    || roles.includes('pkrc') " >
+  <!---STOCK --->
+        <li  class="nav-item has-treeview" v-if="roles.includes('superadmin')   " >
         <a class="nav-link" >
           <i class="nav-icon fas fa-school pink"></i>
-          <p>PKRC
+          <p>INVENTORI
            <i class="right fas fa-angle-left"></i>
            </p>
         </a>
@@ -120,34 +82,34 @@
            <ul class="nav nav-treeview">
 
           <li class="nav-item">
-            <router-link to="/active" class="nav-link">
+            <router-link to="/stock/out" class="nav-link">
              
               <p id="submenu">
-                Bed Manager
+                Pengeluaran
               </p>
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/admission" class="nav-link">
+            <router-link to="/category" class="nav-link">
            
               <p id="submenu">
-                Senarai 
+                Penerimaan 
               </p>
             </router-link>
           </li>
            <li class="nav-item">
-            <router-link to="/discharge" class="nav-link">
+            <router-link to="/category" class="nav-link">
            
               <p id="submenu">
-                Discaj
+                Pembelian
               </p>
             </router-link>
           </li>
                <li class="nav-item">
-            <router-link to="/newPatient" class="nav-link">
+            <router-link to="/stock-setting" class="nav-link">
            
               <p id="submenu">
-                Pesakit Baru
+                Tetapan
               </p>
             </router-link>
           </li>
@@ -159,39 +121,15 @@
               </p>
             </router-link>
           </li>
-       <li  class="nav-item has-treeview" >
-        <a class="nav-link" >
-          <p  id="submenu"><b>LAPORAN</b>
-           <i class="right fas fa-angle-left"></i>
-           </p>
-         </a>
-    
-           <ul class="nav nav-treeview">
-            <li class="nav-item">
-            <router-link to="/pkrcReport" class="nav-link">
-           
-              <p id="submenu">
-                Census
-              </p>
-            </router-link>
-          </li>
-               <li class="nav-item">
-            <router-link  to="/pkrcManual" class="nav-link">
-           
-              <p id="submenu">
-                PKRC
-              </p>
-            </router-link>
-          </li>
-           </ul>
-       </li>
+     
+         
         </ul>
       </li> 
-     <!--LAPORAN-->
+     <!--MAIN ITEM-->
         <li  class="nav-item has-treeview" v-if="roles.includes('superadmin')    || roles.includes('hospital') " >
         <a class="nav-link" >
           <i class="nav-icon fas fa-clipboard "></i>
-          <p>Laporan
+          <p>SENARAI ITEM
            <i class="right fas fa-angle-left"></i>
            </p>
         </a>
@@ -199,56 +137,22 @@
            <ul class="nav nav-treeview">
 
           <li class="nav-item">
-            <router-link to="/nursingreport" class="nav-link">
+            <router-link to="/items" class="nav-link">
              
               <p id="submenu">
-                Nursing
+                Item
               </p>
             </router-link>
           </li>
               <li class="nav-item">
-            <router-link to="/NursingCensus" class="nav-link">
+            <router-link to="/itemsetting" class="nav-link">
              
               <p id="submenu">
-                Nursing Census
+                Tetapan
               </p>
             </router-link>
           </li>
-          <li class="nav-item">
-            <router-link to="/pkrcManual" class="nav-link">
-           
-              <p id="submenu">
-                PKRC
-              </p>
-            </router-link>
-          </li>
-       <li  class="nav-item has-treeview"  v-if="roles.includes('superadmin')    || roles.includes('hospital') " >
-        <a class="nav-link" >
-          <i class="nav-icon fas fa-chart-bar "></i>
-          <p>Census
-           <i class="right fas fa-angle-left"></i>
-           </p>
-         </a>
-    
-           <ul class="nav nav-treeview">
-            <li class="nav-item">
-            <router-link to="/InpatientReport" class="nav-link">
-           
-              <p id="submenu">
-                Pesakit Dalam
-              </p>
-            </router-link>
-          </li>
-               <li class="nav-item">
-            <router-link to="/pkrcReport" class="nav-link">
-           
-              <p id="submenu">
-                PKRC
-              </p>
-            </router-link>
-          </li>
-           </ul>
-       </li>
+         
         </ul>
       </li> 
 
@@ -356,79 +260,8 @@
         </ul>
       </li>
 
-<!--JKNS VIEW-->
-           <!--Pesakit Dalam-->
-        <li  class="nav-item has-treeview"  v-if="roles.includes('jkns')    || roles.includes('kesihatan')  || roles.includes('admin')" >
-        <a class="nav-link" >
-          <i class="nav-icon fas fa-h-square purple "></i>
-          <p>WAD
-           <i class="right fas fa-angle-left"></i>
-           </p>
-        </a>
-    
-           <ul class="nav nav-treeview">
+ 
 
-          <li class="nav-item">
-            <router-link to="/jkns/inpatient/active" class="nav-link">
-           
-              <p id="submenu">
-                Senarai Aktif
-              </p>
-            </router-link>
-          </li>
-           <li class="nav-item">
-            <router-link to="/jkns/inpatient/discharge" class="nav-link">
-           
-              <p id="submenu">
-               Senarai Discaj
-              </p>
-            </router-link>
-          </li>
-
-        </ul>
-      </li> 
-      <!--PKRC-->
-        <li  class="nav-item has-treeview"  v-if="roles.includes('jkns')    || roles.includes('kesihatan')     || roles.includes('admin')" >
-        <a class="nav-link" >
-          <i class="nav-icon fas fa-school pink"></i>
-          <p>PKRC
-           <i class="right fas fa-angle-left"></i>
-           </p>
-        </a>
-    
-           <ul class="nav nav-treeview">
-          <li class="nav-item">
-            <router-link to="/jkns/pkrc/active"  class="nav-link">
-           
-              <p id="submenu">
-                Senarai 
-              </p>
-            </router-link>
-          </li>
-           <li class="nav-item">
-            <router-link to="/jkns/pkrc/discharge"  class="nav-link">
-           
-              <p id="submenu">
-                Discaj
-              </p>
-            </router-link>
-          </li>
-
-
-            <li class="nav-item">
-            <router-link to="/pkrcReport" class="nav-link">
-           
-              <p id="submenu">
-                Census
-              </p>
-            </router-link>
-                      </li>
-
-          
-   
-        </ul>
-      </li> 
-<!-- jkns end-->
 
       <li class="nav-item" v-show="$route.path === '/login' ? false : true ">
               <router-link to="/logout" class="nav-link">

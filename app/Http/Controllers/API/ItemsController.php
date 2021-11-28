@@ -18,13 +18,13 @@ class ItemsController extends Controller
     public function index()
     {
         $items = Items::all();
-       // $items = DB::table('items')
-       //->join('categories','items.category_id','categories.id')
+        $items = DB::table('items')
+       ->join('categories','items.category_id','categories.id')
       //->join('skus','items.category_id','skus.id')
       // ->join('pkus','items.category_id','pkus.id')
-      // ->select('items.*','categories.category_name','skus.sku','pkus.pku')
-      //  ->orderBy('descriptions','asc')
-      //  ->get();
+       ->select('items.*','categories.category_name')
+       ->orderBy('descriptions','asc')
+       ->get();
       
         return response()->json($items);
 
